@@ -1,0 +1,36 @@
+{
+  "name": "electron-inventory-phi3",
+  "version": "1.0.0",
+  "description": "Sistema de Inventario Inteligente con IA local Phi-3 y optimización logística",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShakalDLT/Electron-Inventory-Phi3.git"
+  },
+  "keywords": [
+    "electron",
+    "inventory",
+    "ai",
+    "phi-3",
+    "sqlite"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ShakalDLT/Electron-Inventory-Phi3/issues"
+  },
+  "homepage": "https://github.com/ShakalDLT/Electron-Inventory-Phi3#readme",
+  "devDependencies": {
+    "electron": "^40.6.0"
+  },
+  "dependencies": {
+    "axios": "^1.13.5",
+    "jspdf": "^4.2.0",
+    "sqlite3": "^5.1.7"
+  }
+}

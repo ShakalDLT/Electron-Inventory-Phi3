@@ -1,0 +1,49 @@
+<div class="view-section animate-fade">
+    
+    <header class="card">
+        <div class="card-title">
+            <div class="title-group">
+                <h3>Asistente Analítico Phi-3</h3>
+                <p class="subtitle">Análisis predictivo y optimización de stock en tiempo real</p>
+            </div>
+            <span class="badge badge-ai">IA LOCAL ACTIVE</span>
+        </div>
+
+        <div id="ia-console" class="status-monitor">
+            <span class="terminal-prefix">>_</span> Esperando instrucciones del operador logístico...
+        </div>
+        
+        <div class="input-container-ai">
+            <textarea id="ia-input" 
+                placeholder="Ejemplo: 'Analiza la rotación de stock y dime qué productos necesito pedir con urgencia para evitar quiebres.'"
+                rows="3"></textarea>
+            
+            <div class="action-bar">
+                <div class="ia-hints">
+                    <small>💡 Tip: Pregunta por proveedores específicos o proyecciones de gasto.</small>
+                </div>
+                <button class="btn-success btn-ia-execute" onclick="consultarIA()">
+                    <span class="icon">🚀</span> EJECUTAR ANÁLISIS PHI-3
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <article class="card result-card">
+        <div class="card-title">
+            <h4><span class="icon">📊</span> Informe Generado</h4>
+            <div class="card-tools">
+                <button class="btn-sm btn-edit" onclick="copyAiResponse()" title="Copiar al portapapeles">📋</button>
+            </div>
+        </div>
+        
+        <div id="ia-data-container" class="data-viewport">
+            <div class="empty-state">
+                <div class="empty-icon">🧠</div>
+                <p>No hay informes generados actualmente.</p>
+                <small>El análisis aparecerá aquí una vez procesada la consulta.</small>
+            </div>
+        </div>
+    </article>
+
+</div>

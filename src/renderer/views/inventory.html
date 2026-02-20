@@ -1,0 +1,47 @@
+<div class="view-section animate-fade">
+    
+    <div class="card inventory-card">
+        <div class="card-title">
+            <div class="title-group">
+                <h3>Monitor de Stock en Tiempo Real</h3>
+                <p class="subtitle">Visualización completa de existencias y niveles de alerta</p>
+            </div>
+            
+            <div class="inventory-tools">
+                <div class="search-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="search-input" 
+                        onkeyup="buscarProducto()" 
+                        placeholder="Buscar por nombre, SKU o proveedor..."
+                        autocomplete="off">
+                </div>
+                
+                <div class="filter-group">
+                    <button class="btn-filter" onclick="filtrarStockBajo()" title="Ver solo stock bajo">
+                        ⚠️ <span class="filter-label">Alertas</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container-wrapper">
+            <div id="inventory-table-container" class="table-scroll">
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Sincronizando con base de datos...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-footer-stats">
+            <div class="stat-item">
+                <span class="stat-label">Total Productos:</span>
+                <span id="stat-total-items" class="stat-value">--</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Valorizado Inventario:</span>
+                <span id="stat-total-value" class="stat-value">--</span>
+            </div>
+        </div>
+    </div>
+</div>

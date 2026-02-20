@@ -1,0 +1,33 @@
+<div class="login-container animate-fade">
+    <div class="login-card">
+        <div class="login-header">
+            <span class="login-logo">📦</span>
+            <h2>Smart Stock AI</h2>
+            <p>Identifíquese para acceder al sistema</p>
+        </div>
+        
+        <form id="login-form" onsubmit="event.preventDefault(); handleLogin();">
+            <div class="field">
+                <label>Usuario</label>
+                <input type="text" id="login-user" placeholder="Nombre de usuario" required>
+            </div>
+            
+            <div class="field">
+                <label>Contraseña</label>
+                <input type="password" id="login-pass" placeholder="••••••••" required>
+            </div>
+
+            <div id="login-error" class="login-error-msg" style="display: none;">
+                ❌ Credenciales incorrectas
+            </div>
+
+            <button type="submit" class="btn-success login-btn">
+                ENTRAR AL SISTEMA
+            </button>
+        </form>
+        
+        <div class="login-footer">
+            <small>© 2026 Sistema de Gestión de Inventario Blindado</small>
+        </div>
+    </div>
+</div>

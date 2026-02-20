@@ -1,0 +1,79 @@
+<div class="view-section animate-fade">
+    
+    <div class="admin-layout-grid">
+        
+        <aside class="card admin-form-card">
+            <div class="card-title">
+                <div class="title-group">
+                    <h3>Gestión de Producto</h3>
+                    <p class="subtitle">Alta y modificación de registros en base de datos</p>
+                </div>
+            </div>
+
+            <form id="product-form" onsubmit="event.preventDefault();">
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="form-nombre">Nombre del Producto <span class="required">*</span></label>
+                        <input type="text" id="form-nombre" placeholder="Ej: Cable UTP Cat6" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="form-sku">SKU / Código Único <span class="required">*</span></label>
+                        <input type="text" id="form-sku" placeholder="SKU-001-B" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="form-precio">Precio de Compra ($)</label>
+                        <input type="number" id="form-precio" step="0.01" placeholder="0.00">
+                    </div>
+
+                    <div class="field">
+                        <label for="form-stock">Stock Inicial</label>
+                        <input type="number" id="form-stock" placeholder="0">
+                    </div>
+
+                    <div class="field full">
+                        <label for="form-proveedor">Proveedor Asignado</label>
+                        <div class="select-wrapper">
+                            <select id="form-proveedor">
+                                <option value="">Cargando proveedores...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="limpiarFormularioAdmin()">
+                        Limpiar Campos
+                    </button>
+                    <button type="button" class="btn-success" onclick="agregarProducto()">
+                        <span class="icon">💾</span> GUARDAR PRODUCTO
+                    </button>
+                </div>
+            </form>
+        </aside>
+
+        <section class="card admin-table-card">
+            <div class="card-title">
+                <div class="title-group">
+                    <h3>Listado Maestro de Auditoría</h3>
+                    <p class="subtitle">Control directo sobre registros existentes</p>
+                </div>
+                <div class="table-badges">
+                    <span id="badge-db-count" class="badge">0 Registros</span>
+                </div>
+            </div>
+
+            <div class="table-container-wrapper admin-table-height">
+                <div id="admin-table-container" class="table-scroll">
+                    <p class="empty-state">Iniciando tabla de auditoría...</p>
+                </div>
+            </div>
+            
+            <div class="admin-notice">
+                <small>⚠️ <strong>Nota:</strong> Los cambios realizados en el listado de auditoría afectan directamente a la base de datos de producción.</small>
+            </div>
+        </section>
+
+    </div>
+</div>
